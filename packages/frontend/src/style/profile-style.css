@@ -1,0 +1,190 @@
+body {
+    background: #FAF9F6;
+    height: 100vh;
+    margin: 0;
+}
+* {
+    margin: 0;  /* Remove as margens padrão de todos os elementos */
+    padding: 0; /* Remove os espaçamentos internos padrão */
+    box-sizing: border-box; /* Faz o cálculo de largura/altura incluir o padding e a borda */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão da página */
+}
+
+/* ===========================
+   Cabeçalho
+   =========================== */
+.header-nav {
+    display: flex;              /* Coloca os botões lado a lado */
+    align-items: center;        /* Centraliza verticalmente */
+    justify-content: center;    /* Centraliza horizontalmente dentro do nav */
+    gap: 10px;                  /* Espaço entre os botões */
+}
+
+.main-header {
+    display: flex; /* Coloca os elementos (logo e nav) lado a lado */
+    justify-content: space-between; /* Logo fica à esquerda e a nav vai para a direita */
+    align-items: center; /* Centraliza verticalmente logo e botões */
+    padding: 3px 10px; /* Espaçamento interno (em cima/baixo e nas laterais) */
+    background-color: white; /* Fundo branco do header */
+    /*border-bottom: 2px solid #ccc; /* Linha cinza embaixo do header */
+}
+
+.logo {
+    height: 33px; /* Define a altura da logo */
+}
+
+/* ===========================
+   Botão verde do calendário
+   =========================== */
+.calendar-btn {
+    padding: 8px 15px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Deixa as bordas arredondadas */
+    background-color: #028a0f; /* Cor verde de fundo */
+    color: white; /* Cor do texto do botão */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+    transition: background 0.3s; /* Suaviza a troca de cor quando passa o mouse */
+}
+
+.calendar-btn:hover {
+    background-color: #026d0c; /* Cor verde mais escura quando passa o mouse */
+}
+
+/* ===========================
+Botão do perfil (ícone)
+=========================== */
+.profile-btn {
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Adiciona uma borda roxa */
+    /* border-radius: 5px; /* Deixa os cantos arredondados */
+    padding: 6px; /* Espaço interno ao redor do ícone */
+    margin-left: 10px; /* Espaço entre o botão do calendário e o de perfil */
+    cursor: pointer; /* Mostra a mãozinha quando passa o mouse */
+}
+
+.profile-btn img {
+    height: 42px; /* Altura do ícone de perfil */
+    width: 50px;  /* Largura do ícone de perfil */
+}
+/*----------------------------------------------------------------------------*/
+.containers{
+    display: flex; /* Coloca os elementos (logo e nav) lado a lado */
+    margin: 1%;
+}
+.lado-infos {
+    width: 75%;
+    border: 2px black;
+    border-radius: 5px;
+}
+
+/* Banner do perfil (fundo) */
+.banner {
+    width: 100%;   /* Ocupa toda a largura */
+    height: 130px; /* Ajusta a altura do banner */
+    object-fit: cover; /* Corta a imagem sem distorcer */
+    display: block; /* Evita espaços embaixo da imagem */
+    border-radius: 5px;
+}
+/* Foto de perfil (fica sobre o banner) */
+.foto-de-perfil {
+    position: absolute;  /* Vai se posicionar em relação ao .imagens-perfil */
+    bottom: 380px;       /* Fica metade dentro e metade fora do banner */
+    left: 8%;           /* Centraliza horizontalmente */
+    transform: translateX(30%); /* Corrige o alinhamento no centro */
+
+    width: 100px;  /* Tamanho da foto */
+    height: 100px;
+    border-radius: 5px;  /* Foto redonda */
+    border: 2px solid white; /* Borda branca destacando */
+    object-fit: cover;   /* Mantém proporção da imagem */
+}
+.names-info {
+    margin-top: 6%;
+    margin-left: 13%;
+}
+.names-info h1 {
+    font-size: 24px;
+    color: #7300D8;
+}
+.names-info h2 {
+    font-size: 18px;
+    color: #01800D;
+}
+.lado-infos {
+    border: 1px solid black;
+}
+.forms-com-informações label{
+    font-weight: bold;       /* Texto em negrito */
+    color: #333;             /* Cor escura */
+    display: block;          /* Faz o label ocupar a linha toda */
+}
+.forms-com-informações form{
+    padding: 3%;
+}
+
+/* Campos de texto, email e senha */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 80%;             /* Campo ocupa toda a largura do form */
+    padding: 10px;           /* Espaçamento interno */
+    margin-bottom: 5px;     /* Espaço entre os campos */
+    border: 1px solid #ccc;  /* Borda cinza clara */
+    border-radius: 5px;      /* Cantos arredondados */
+    font-size: 16px;         /* Texto maior */
+    box-sizing: border-box;  /* Inclui padding na largura */
+}
+
+/* Quando o usuário clica no campo */
+form input:focus {
+    outline: none;           /* Remove a linha padrão do navegador */
+    box-shadow: 0 0 5px rgba(2, 138, 15, 0.3); /* Brilho verde */
+}
+.lado-recomendacoes {
+    border: 1px solid black;
+    margin-left: 1%;
+    border-radius: 5px;
+    padding: 5px;
+}
+.lado-recomendacoes h1{
+    font-size: 20px;
+    color: #01800D;
+}
+.card-rec {
+    display: flex;
+    background-color: #92929269;
+    border-radius: 5px;
+    margin: 3%;  
+    padding: 2%;
+}
+.icon-seta {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+.card-rec h1{
+    font-size: 16px;
+    color: #333;
+}
+.card-rec h2{
+    font-size: 14px;
+}
+.foto-evento {
+    width: 75px;
+    height: 70px;
+    border-radius: 5px;
+}
+.card-rec a {
+    font-size: 11px;
+}
+.infos-side {
+    margin-left: 5px;
+}
+
+/* Container só para título e seta */
+.infos-side .title-row {
+    display: flex;
+    align-items: center;     /* centraliza verticalmente */
+    flex-wrap: nowrap;           /* Impede que os itens se movam para a linha seguinte */
+}
