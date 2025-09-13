@@ -152,6 +152,7 @@ form input:focus {
     color: #01800D;
 }
 .card-rec {
+    align-items:center;
     display: flex;
     background-color: #92929269;
     border-radius: 5px;
@@ -159,27 +160,61 @@ form input:focus {
     padding: 2%;
 }
 .icon-seta {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin-left: 5px;
 }
 .card-rec h1{
-    font-size: 16px;
-    color: #333;
+    font-size: 15px;
+    color: #000000;
+    margin: 2.5px;
 }
 .card-rec h2{
     font-size: 14px;
+    margin: 2.5px;
 }
 .foto-evento {
     width: 75px;
-    height: 70px;
+    height: 60px;
     border-radius: 5px;
 }
-.card-rec a {
+.link-evento {
+    margin: 2.5px;
+    color: #000000;
+    text-decoration: none;
     font-size: 11px;
 }
+.card-links{
+    color: #000000;
+    text-decoration: none;
+    font-size: 11px;
+}
+.coitainerbotao {
+    display: flex;
+    justify-content: center; /* alinha filhos no eixo horizontal */  
+}
+.btn-edit {
+    margin: 5px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 90%;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
 .infos-side {
-    margin-left: 5px;
+    margin-left: 4px;
+}
+.row {
+    display: flex;
+    align-items: center;
+}
+.row img {
+    width: 13px;
+    height: 13px;
 }
 
 /* Container só para título e seta */

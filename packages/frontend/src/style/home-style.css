@@ -65,6 +65,147 @@ body {
 }
 
 /*-----------------------------EVENTOS EM ALTA---------------------------------*/
+
+        .event-card {
+            background-color: rgba(255, 255, 255, 0.274);
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: none;
+        }
+
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* centraliza imagem e mantém boa aparência */
+        .event-card img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+        }
+
+        
+        
+        .big-card img {
+            height: 200px;
+            width: 100%;
+        }
+        
+        .small-card img {
+            height: 160px;
+            width: 100%;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            color: white;
+            text-align: start;
+        }
+        
+        .truncate-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .btn-calendar {
+            background-color: #028a0f;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        
+        .btn-calendar:hover {
+            background-color: #026d0c;
+            color: white;
+        }
+        
+        .profile-btn {
+            background: none;
+            border: none;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        
+        /* Estilos para o carrossel */
+        .carousel-eventos {
+            margin: 20px 0;
+        }
+        
+ /* Estilos para os controladores do carrossel */
+        .carousel-control-prev, 
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            opacity: 0.8;
+            z-index: 10;
+        }
+        
+        .carousel-control-prev {
+            left: 0;
+        }
+        
+        .carousel-control-next {
+            right: 0;
+        }
+        
+        .carousel-control-prev:hover, 
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+        
+        
+        .carousel-indicators {
+            bottom: -40px;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .carousel-indicators .active {
+            background-color: white;
+        }
+        
+        /* Ajustes para responsividade */
+        @media (max-width: 768px) {
+            .carousel-control-prev {
+                left: 0;
+            }
+            
+            .carousel-control-next {
+                right: 0;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+
+
 .lines {
     color: #fff; /* texto branco pra contrastar */ 
     margin: 20px;
