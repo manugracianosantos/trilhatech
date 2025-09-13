@@ -215,8 +215,7 @@
         }
     }
 
-        // Carregar eventos quando a página estiver pronta
-        document.addEventListener('DOMContentLoaded', function() {
-            renderizarCarrossel(eventosGerais, 'carousel-inner-alta');
-            renderizarSegundoCarrossel(eventosGerais, 'eventos-rmc');
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    renderizarCarrossel(eventosGerais, 'carousel-inner-alta');
+    renderizarSegundoCarrossel(eventosGerais, 'eventos-rmc', 'carouselRMC'); // Adicione o ID do carousel
+});

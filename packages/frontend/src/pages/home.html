@@ -40,12 +40,26 @@
             </div>
         </section>
 
-        <!-- Região Metropolitana de Campinas com Grid Bootstrap  -->
-        <section class="mb-5">
-            <h2 class="section-title">Região Metropolitana de Campinas</h2>
-            <div class="row" id="eventos-rmc">
-            </div>
-        </section>
+<!-- Região Metropolitana de Campinas com Carrossel -->
+<section class="mb-5">
+    <h2 class="section-title">Região Metropolitana de Campinas</h2>
+    
+    <div id="carouselRMC" class="carousel slide carousel-eventos" data-bs-ride="carousel">
+        <div class="carousel-inner" id="eventos-rmc">
+            <!-- Conteúdo será preenchido pelo JavaScript -->
+        </div>
+        
+        <!-- Controles do carrossel (opcional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRMC" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselRMC" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+</section>
         
     </main>
 </body>
