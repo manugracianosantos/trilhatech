@@ -1,102 +1,113 @@
-// Dados de exemplo para os eventos
-    const eventos = [
-        {
-            id: 1,
-            titulo: "Workshop de React",
-            data: "15/10/2023",
-            horario: "14:00 - 17:00",
-            descricao: "Aprenda os conceitos básicos de React e construa sua primeira aplicação.",
-            local: "Sala de Treinamento - Andar 3"
-        },
-        {
-            id: 2,
-            titulo: "Reunião de Planejamento",
-            data: "18/10/2023",
-            horario: "09:00 - 10:30",
-            descricao: "Reunião para planejamento do próximo trimestre.",
-            local: "Sala de Reuniões A"
-        },
-        {
-            id: 3,
-            titulo: "Palestra sobre IA",
-            data: "22/10/2023",
-            horario: "19:00 - 21:00",
-            descricao: "Palestra com especialistas sobre Inteligência Artificial e suas aplicações.",
-            local: "Auditório Principal"
-        },
-        {
-            id: 4,
-            titulo: "Treinamento de Segurança",
-            data: "25/10/2023",
-            horario: "13:30 - 16:00",
-            descricao: "Treinamento obrigatório sobre políticas de segurança da informação.",
-            local: "Sala de Treinamento - Andar 2"
-        },
-        {
-            id: 5,
-            titulo: "Evento de Networking",
-            data: "28/10/2023",
-            horario: "18:30 - 21:00",
-            descricao: "Conecte-se com profissionais da área e expanda sua rede de contatos.",
-            local: "Hall Central"
-        }
-    ];
+        // Dados de exemplo - substitua pela sua lógica de carregamento
+        const eventos = [
+            {
+                id: 1,
+                nome: "Tech Conference 2023",
+                local: "São Paulo, SP",
+                data: "15 Out 2023, 09:00",
+                imagem: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                descricao: "O maior evento de tecnologia do ano com palestrantes internacionais e workshops exclusivos.",
+                link: "https://exemplo.com/tech-conference"
+            },
+            {
+                id: 2,
+                nome: "Dev Week",
+                local: "Rio de Janeiro, RJ",
+                data: "22 Out 2023, 14:00",
+                imagem: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                descricao: "Uma semana intensiva de imersão em desenvolvimento web, com foco em frameworks modernos.",
+                link: "https://exemplo.com/dev-week"
+            },
+            {
+                id: 3,
+                nome: "UX Design Summit",
+                local: "Online",
+                data: "05 Nov 2023, 10:00",
+                imagem: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                descricao: "Conferência dedicada a experiências do usuário, design thinking e interfaces inovadoras.",
+                link: "https://exemplo.com/ux-summit"
+            },
+            {
+                id: 4,
+                nome: "Python Conference",
+                local: "São Paulo, SP",
+                data: "12 Nov 2023, 08:30",
+                imagem: "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                descricao: "Maior evento da comunidade Python brasileira com palestras e workshops.",
+                link: "https://exemplo.com/python-conf"
+            }
+        ];
+// Função para gerar os cards de eventos recomendados
+function generateEventCards(listaEventos) {
+    const eventsContainer = document.getElementById('eventos-lista');
+    eventsContainer.innerHTML = ''; // Limpa antes de renderizar
 
-    // Função para renderizar os eventos
-    function renderizarEventos(eventosParaRenderizar) {
-        const container = document.getElementById('containerEventos');
-        container.innerHTML = '';
-        
-        if (eventosParaRenderizar.length === 0) {
-    container.innerHTML = '<p class="sem-resultados">Nenhum evento encontrado.</p>';
-    return;
-        }
-        
-        eventosParaRenderizar.forEach(evento => {
-    const card = document.createElement('div');
-    card.className = 'card-evento';
-    card.innerHTML = `
-        <div class="card-titulo">${evento.titulo}</div>
-        <div class="card-info">
-    <span>${evento.data}</span>
-    <span>${evento.horario}</span>
-        </div>
-        <div class="card-info">
-    <span>${evento.local}</span>
-        </div>
-        <div class="card-descricao">${evento.descricao}</div>
-        <button class="btn-adicionar" onclick="adicionarEvento(${evento.id})">Adicionar na agenda</button>
-    `;
-    container.appendChild(card);
-        });
-    }
+    listaEventos.forEach(evento => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'card-rec';
 
-    // Função para adicionar evento à agenda
-    function adicionarEvento(id) {
-        const evento = eventos.find(e => e.id === id);
-        if (evento) {
-    alert(`Evento "${evento.titulo}" adicionado à sua agenda!`);
-    // Aqui você implementaria a lógica real para adicionar ao Google Calendar
-    // Por exemplo, usando a API do Google Calendar
-        }
-    }
+        eventCard.innerHTML = `
+            <div class="card-search">
+                <img src="${evento.imagem}" alt="Foto do evento" class="foto-evento">
+                <div class="infos-side">
+                    <div class="title-row">    
+                        <h1>${evento.nome}</h1>
+                        <img src="../assets/icon-seta.png" alt="Icon de seta" class="icon-seta">
+                    </div>
+                    <a href="${evento.link}" class="link-evento" target="_blank">${evento.link}</a>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="buttonAdd" onclick="adicionarNaAgenda(${evento.id})">
+                         Adicionar na agenda
+                    </button>
+                </div>
+                </div>
+            </div>
+        `;
 
-    // Função para filtrar eventos com base na pesquisa
-    function filtrarEventos() {
-        const termo = document.getElementById('campoPesquisa').value.toLowerCase();
-        const eventosFiltrados = eventos.filter(evento => 
-    evento.titulo.toLowerCase().includes(termo) ||
-    evento.descricao.toLowerCase().includes(termo) ||
-    evento.local.toLowerCase().includes(termo)
-        );
-        
-        renderizarEventos(eventosFiltrados);
-    }
-
-    // Inicializar a página com todos os eventos
-    document.addEventListener('DOMContentLoaded', function() {
-        renderizarEventos(eventos);
-        
-        // Adicionar listener para a barra de pesquisa
-        document.getElementById('campoPesquisa').addEventListener('input', filtrarEventos);
+        eventsContainer.appendChild(eventCard);
     });
+}
+
+        // Função para adicionar evento na agenda
+        function adicionarNaAgenda(id) {
+            const evento = eventos.find(e => e.id === id);
+            if (evento) {
+                alert(`Evento "${evento.nome}" adicionado à sua agenda!`);
+                // Aqui você implementaria a integração com a API do Google Calendar
+            }
+        }
+
+// Função para filtrar eventos
+function filtrarEventos() {
+    const termo = document.getElementById('search-input').value.toLowerCase();
+    const eventosFiltrados = eventos.filter(evento => 
+        evento.nome.toLowerCase().includes(termo) ||
+        evento.local.toLowerCase().includes(termo) ||
+        evento.descricao.toLowerCase().includes(termo)
+    );
+    renderizarEventos(eventosFiltrados);
+}
+
+
+        // Inicializar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            generateEventCards(eventos);
+            
+            // Adicionar evento de pesquisa
+            document.getElementById('search-input').addEventListener('input', filtrarEventos);
+            
+            // Adicionar evento de clique nos cards (exceto nos botões)
+            document.getElementById('eventos-lista').addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    const card = e.target.closest('.card-rec');
+                    if (card) {
+                        const link = card.querySelector('.link-evento');
+                        if (link) {
+                            window.open(link.href, '_blank');
+                        }
+                    }
+                }
+            });
+        });

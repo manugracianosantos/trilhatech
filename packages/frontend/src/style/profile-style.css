@@ -74,8 +74,8 @@ Botão do perfil (ícone)
 }
 .lado-infos {
     width: 75%;
-    border: 2px black;
-    border-radius: 5px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 
 /* Banner do perfil (fundo) */
@@ -111,9 +111,7 @@ Botão do perfil (ícone)
     font-size: 18px;
     color: #01800D;
 }
-.lado-infos {
-    border: 1px solid black;
-}
+
 .forms-com-informações label{
     font-weight: bold;       /* Texto em negrito */
     color: #333;             /* Cor escura */
@@ -142,9 +140,9 @@ form input:focus {
     box-shadow: 0 0 5px rgba(2, 138, 15, 0.3); /* Brilho verde */
 }
 .lado-recomendacoes {
-    border: 1px solid black;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     margin-left: 1%;
-    border-radius: 5px;
     padding: 5px;
 }
 .lado-recomendacoes h1{
